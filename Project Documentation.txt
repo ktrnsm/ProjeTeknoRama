@@ -1,4 +1,20 @@
 This Project  will be coded by the lead of  Tier Architecture
-The Planned Layer are DAL;BLL;COMMON;MAP;MVCUI
+The Planned Layer are
+API
+BLL
+COMMON
+DAL
+DTO
+ENTITIES
+MAP
+MVCUI
+WEBAPI
 
-adasdasdasdas
+
+Entities>>
+1- Database Diagram> classes  designed and relations assigned
+2-Enum classes has been created
+
+
+
+
