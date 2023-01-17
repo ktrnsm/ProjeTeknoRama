@@ -1,19 +1,38 @@
 This Project  will be coded by the lead of  Tier Architecture
-The Planned Layer are
+The Planned Layer are listed as belov
+
+Local variables >> camelCase,
+In fields >> _camelCase,
+Property, Class, Methods >> PascalCase,
+Layers will be named as Project."XXX",
+
 API
-BLL
-COMMON
-DAL
-DTO
-ENTITIES
-MAP
-MVCUI
-WEBAPI
+BLL > SingletonPattern , GenericRepository
+COMMON > Tools
+DAL > Strategy Pattern
+DTO > Models
+ENTITIES > Enums, Models
+MAP > Options
+MVCUI > Controllers, Views
+WEBAPI> Bank Payment Connection
 
 
-Entities>>
+
+Project Stages;
+
+a) Project.ENTITIES
 1- Database Diagram> classes  designed and relations assigned
 2-Enum classes has been created
+
+b) Project.DAL
+1- StrategyPattern
+There are 8 kind of users demanded, The AppUsers defined in this section.
+
+
+c) Project.MAP
+
+d)Project.COMMON
+1-BCrypt.Net system preferred while
 
 
 
