@@ -30,6 +30,7 @@ There are 8 kind of users demanded, The AppUsers defined in this section.
 
 
 c) Project.MAP
+1-Option classes created
 
 d)Project.COMMON
 1-BCrypt.Net system preferred while

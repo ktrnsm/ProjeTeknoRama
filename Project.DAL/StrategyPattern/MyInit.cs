@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,15 +15,7 @@ namespace Project.DAL.StrategyPattern
         protected override void Seed(MyContext context)
         {
             #region Admin
-            AppUser admin = new AppUser
-            {
-                UserName="admin",
-                Email="iktuerensemih@gmail.com",
-                Password= Pass
-                
-
-
-            };
+            
 
             #endregion
         }

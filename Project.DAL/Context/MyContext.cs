@@ -12,7 +12,7 @@ namespace Project.DAL.Context
 {
     public  class MyContext:DbContext
     {
-        MyContext():base("MyConnection")
+        public MyContext():base("MyConnection")
         {
             Database.SetInitializer(new MyInit());
         }
@@ -37,7 +37,7 @@ namespace Project.DAL.Context
 
         }
 
-        public DbSet<UserProfile> userProfiles { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
