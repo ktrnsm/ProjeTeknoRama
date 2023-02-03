@@ -57,10 +57,11 @@ namespace WEBUI.Areas.Administration.Controllers
             Product= new Product(),
             Categories=_cRep.GetActives(),
             Suppliers=_sRep.GetActives()
-
+            // there is a problem here
             };
             return View(pvm);
         }
+
 
     }
 }
