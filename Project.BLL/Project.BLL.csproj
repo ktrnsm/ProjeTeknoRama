@@ -52,13 +52,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignPatterns\GenericRepository\BaseRepository\BaseRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\AppUserRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\CategoryRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\EmployeeRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\EmployeeTerritoryRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\ExpensesRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\IssueRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\MessageRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\OrderDetailRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\OrderRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\ProductRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\ShipperRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\SupplierRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\TerritoryRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRepository\UserProfileRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\IRepository\IRepository.cs" />
     <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DesignPatterns\GenericRepository\ConcRepository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

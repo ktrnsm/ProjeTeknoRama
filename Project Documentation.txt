@@ -35,7 +35,10 @@ c) Project.MAP
 d)Project.COMMON
 1-BCrypt.Net system preferred while
 
-e
+e:Project.BLL
+
+
+//Conc REp relations need to be organised
 
 
 
