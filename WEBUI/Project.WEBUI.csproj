@@ -134,12 +134,24 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Administration\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Administration\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Administration\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\Administration\Controllers\EmployeeTerritoryController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ExpenseController.cs" />
+    <Compile Include="AuthenticationClasses\AccounterAuthentication.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\EmployeeAuthentication.cs" />
     <Compile Include="AuthenticationClasses\ManagerAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\MobileSalesAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\SalesAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\TechServiceAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\VisitorAuthentication.cs" />
+    <Compile Include="AuthenticationClasses\WareAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Currency\Currency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VMClasses\AppUserVM.cs" />
     <Compile Include="VMClasses\CartPageVM.cs" />
@@ -198,7 +210,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\AdminContent\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

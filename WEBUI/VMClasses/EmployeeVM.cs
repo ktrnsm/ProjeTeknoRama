@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WEBUI.VMClasses
+namespace Project.WEBUI.VMClasses
 {
     public class EmployeeVM
     {

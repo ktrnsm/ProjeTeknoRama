@@ -40,9 +40,26 @@ namespace WEBUI.Areas.Administration.Controllers
             return RedirectToAction("CategoryList");
         }
 
+        public ActionResult UpdateCategory(int id)
+        {
+            CategoryVM cvm = new CategoryVM
+            {
+                Category = _cRep.Find(id)
+            };
+            return View(cvm);
+        }
+        [HttpPost]
         public ActionResult UpdateCategory(Category category)
         {
+            _cRep.Update(category);
+            return RedirectToAction("CategoryList");
 
+        }
+
+        public ActionResult DeleteCategory(int id)
+        {
+            _cRep.Delete(_cRep.Find(id));
+            return RedirectToAction("CategoryList");
         }
 
     }
