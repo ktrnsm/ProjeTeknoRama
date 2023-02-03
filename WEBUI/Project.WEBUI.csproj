@@ -137,6 +137,11 @@
     <Compile Include="Areas\Administration\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Administration\Controllers\EmployeeTerritoryController.cs" />
     <Compile Include="Areas\Administration\Controllers\ExpenseController.cs" />
+    <Compile Include="Areas\Administration\Controllers\IssueController.cs" />
+    <Compile Include="Areas\Administration\Controllers\MessageController.cs" />
+    <Compile Include="Areas\Administration\Controllers\OrderController.cs" />
+    <Compile Include="Areas\Administration\Controllers\OrderDetailController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ProductController.cs" />
     <Compile Include="AuthenticationClasses\AccounterAuthentication.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\EmployeeAuthentication.cs" />

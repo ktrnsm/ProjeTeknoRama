@@ -1,4 +1,5 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRepository;
+using Project.ENTITIES.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,33 @@ namespace WEBUI.Areas.Administration.Controllers
         public ActionResult AddExpenses()
         {
         return View();
+        }
+        
+        [HttpPost]
+        public ActionResult AddExpense(Expense expense)
+        {
+            _eRep.Add(expense);
+            return RedirectToAction("ExpenseList");
+        }
+        public ActionResult UpdateExpense(int id)
+        {
+            ExpenseVM evm = new ExpenseVM
+            {
+                Expense=_eRep.Find(id)
+            };
+            return View(evm);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateExpense(Expense expense)
+        {
+            ;_eRep.Update(expense);
+            return RedirectToAction("ExpenseList");
+        }
+        public ActionResult DeleteExpense(int id)
+        {
+            _eRep.Delete(_eRep.Find(id));
+            return RedirectToAction("ExpenseList");
         }
 
         
