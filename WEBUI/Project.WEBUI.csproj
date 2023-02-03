@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Administration\Controllers\AppUserController.cs" />
+    <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,7 +196,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\AdminContent\" />
-    <Folder Include="AuthenticationClasses\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
