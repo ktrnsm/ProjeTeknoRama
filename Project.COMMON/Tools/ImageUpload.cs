@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Project.COMMON.Tools
 {
-    public static class ImageUpload
+    public static class ImageUpload // copied from another project
     {
         public static string UploadImage(string serverPath, HttpPostedFileBase file)
         {
@@ -18,7 +18,7 @@ namespace Project.COMMON.Tools
 
                 string[] fileArray = file.FileName.Split('.');
 
-                string extension= fileArray[fileArray.Length -].ToLower();
+                string extension= fileArray[fileArray.Length -1].ToLower();
 
                 string fileName = $"{uniqueName}.{extension}";
 

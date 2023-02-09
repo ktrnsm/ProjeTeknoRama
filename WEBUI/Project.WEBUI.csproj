@@ -142,6 +142,8 @@
     <Compile Include="Areas\Administration\Controllers\OrderController.cs" />
     <Compile Include="Areas\Administration\Controllers\OrderDetailController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Administration\Controllers\SupplierController.cs" />
+    <Compile Include="Areas\Administration\Controllers\TerritoryController.cs" />
     <Compile Include="AuthenticationClasses\AccounterAuthentication.cs" />
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\EmployeeAuthentication.cs" />
@@ -152,7 +154,9 @@
     <Compile Include="AuthenticationClasses\TechServiceAuthentication.cs" />
     <Compile Include="AuthenticationClasses\VisitorAuthentication.cs" />
     <Compile Include="AuthenticationClasses\WareAuthentication.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

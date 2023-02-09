@@ -1,4 +1,5 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRepository;
+using Project.COMMON.Tools;
 using Project.ENTITIES.Models;
 using System;
 using System.Collections.Generic;
@@ -56,10 +57,58 @@ namespace WEBUI.Areas.Administration.Controllers
             {
             Product= new Product(),
             Categories=_cRep.GetActives(),
-            Suppliers=_sRep.GetActives()
-            // there is a problem here
+            Suppliers= _sRep.GetActives()
+            // todo  there is a problem here
             };
             return View(pvm);
+        }
+
+        [HttpPost]
+        public ActionResult AddProduct(Product product, HttpPostedFileBase picture)
+        {
+            product.ImangePatch = ImageUpload.UploadImage("/Pictures/", picture);
+            _pRep.Add(product);
+            return RedirectToAction("ProductList");
+
+        }
+
+        public ActionResult UpdateProduct(int id)
+        {
+            ProductVM pvm = new ProductVM
+            {
+                Categories = _cRep.GetActives(),
+                Suppliers=_sRep.GetActives(),
+                // todo mistake here
+                Product = _pRep.Find(id)
+
+            };
+            return View(pvm);
+
+        }
+        [HttpPost]
+        public ActionResult UpdateProduct(Product product, HttpPostedFileBase picture)
+        {
+            if(picture == null)
+            {
+                Product tempProduct = _pRep.Find(product.ID);
+                product.ImangePatch = tempProduct.ImangePatch;
+                
+            }
+
+            else
+            {
+                product.ImangePatch = ImageUpload.UploadImage("/Pictures/", picture);
+            }
+
+            _pRep.Update(product);
+            return RedirectToAction("ProductList");
+
+        }
+
+        public ActionResult DeleteProduct(int id)
+        {
+            _pRep.Delete(_pRep.Find(id));
+            return RedirectToAction("ProductList");
         }
 
 
