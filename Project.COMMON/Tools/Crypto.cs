@@ -9,14 +9,14 @@ namespace Project.COMMON.Tools
 {
     public class Crypto
     {
-        
+        // monitor critic problem assault chief essay prevent glance orient response air save
 
 
-    
+
         public static string HashPassword(string password)
         {
-            var salt = BCrypt.Net.BCrypt.GenerateSalt();
-            var hash = BCrypt.Net.BCrypt.HashPassword(password, salt);
+            string salt = BCrypt.Net.BCrypt.GenerateSalt();
+            string hash = BCrypt.Net.BCrypt.HashPassword(password, salt);
             return hash;
         }
 
