@@ -5,8 +5,8 @@ using System.Web;
 
 namespace WEBUI.VMClasses
 {
-    public class CartPageVM
+    public class CardPageVM
     {
-        public CartPageVM Cart { get; set; }
+        public CardPageVM Card { get; set; }
     }
 }

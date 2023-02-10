@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WEBUI.AuthenticationClasses;
+using WEBUI.Models.ShoppingTools;
 using WEBUI.VMClasses;
 
 namespace WEBUI.Controllers
@@ -38,16 +40,71 @@ namespace WEBUI.Controllers
 
         public ActionResult AddToCart(int id)
         {
-            Cart cart = Session["scart"] == null ? new Cart() : Session["scart"] as Cart;
+            Card card = Session["scart"] == null ? new Card() : Session["scart"] as Card;
             Product productToAdd = _proRep.Find(id);
 
-            CartItem cartItem = new CartItem
+            CardItem cardItem = new CardItem
             {
-                id = productToAdd.ID,
+                ID = productToAdd.ID,
+                Name=productToAdd.ProductName,
                 Price = productToAdd.UnitPrice,
                 ImagePath = productToAdd.ImangePatch
             };
+            card.AddToCard(cardItem);
+
+            Session["count"] = card.ProductCount();
+            Session["scart"] = card;
+
+            return RedirectToAction("ShoppingList");
 
         }
+
+        public ActionResult CardPage()
+        {
+            if (Session["scart"] != null)
+            {
+                CardPageVM cpvm = new CardPageVM();
+                Card card = Session["scart"] as Card;
+                cpvm.Card = card;
+                return View(cpvm);
+
+            }
+            TempData["CardIsEmpty"] = "There is no Product in your Basket";
+            return RedirectToAction("ShoppingList");
+                }
+
+        public ActionResult DeleteFromCard(int id)
+        {
+            if (Session["scart"]!=null)
+            {
+                Card card = Session["scart"] as Card;
+                card.RemoveFromCard(id);
+                Session["coount"] = card.ProductCount();
+
+                if(card.MyBasket.Count==0)
+                {
+                    Session.Remove("scart");
+                    TempData["CardIsEmpty"] = "There is no Product in your Basket";
+                    return RedirectToAction("ShoppingList");
+                }
+                return RedirectToAction("CardPage");
+            }
+            return RedirectToAction("ShoppingList");
+
+        }
+        [HttpPost]
+        public ActionResult ConfirmOrder(OrderVM ovm)
+        {
+            bool result;
+            Card card = Session["scart"] as Card;
+            ovm.Order.TotalPrice = ovm.PaymentDTO.ShoppingPrice = card.TotalCost;
+        }
+
+        [MemberAuthentication]
+        public ActionResult OrderList()
+        {
+            return View();
+        }
+
     }
 }
