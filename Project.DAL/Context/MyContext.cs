@@ -10,7 +10,12 @@ using System.Threading.Tasks;
 
 namespace Project.DAL.Context
 {
-    public  class MyContext:DbContext
+    //This is a class definition for a DbContext class named MyContext. The class inherits from the DbContext class in the Entity Framework and is used as a bridge between the application and the database.
+    //The constructor for this class sets the name of the database connection string to "MyConnection" and initializes it with a custom database initializer MyInit.
+    //The OnModelCreating method is used to add configurations for different entities (AppUser, Category, Employee, Order, etc.). This method is used to define the relationship between the entities and their corresponding tables in the database.
+    //The class also defines several DbSet properties, one for each of the entities defined in the model. These properties represent the sets of entities stored in the database and are used to interact with the data stored in the database.
+
+    public class MyContext:DbContext
     {
         public MyContext():base("MyConnection")
         {
@@ -19,6 +24,7 @@ namespace Project.DAL.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            // Adding entity maps to the model builder
             modelBuilder.Configurations.Add(new AppUserMap());
             modelBuilder.Configurations.Add(new CategoryMap());
             modelBuilder.Configurations.Add(new EmployeeMap());
@@ -37,6 +43,7 @@ namespace Project.DAL.Context
 
         }
 
+        // Entity Sets
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Category> Categories { get; set; }

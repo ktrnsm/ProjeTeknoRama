@@ -18,13 +18,13 @@ namespace WEBUI.Areas.Administration.Controllers
 
         ProductRepository _pRep;
         CategoryRepository _cRep;
-        SupplierRepository _sRep;
+        SupplierRepository _suRep;
 
         public ProductController()
         {
             _pRep = new ProductRepository();
             _cRep = new CategoryRepository();
-            _sRep = new SupplierRepository();
+            _suRep = new SupplierRepository();
         }
 
         public ActionResult ProductDetail(int id)
@@ -57,7 +57,7 @@ namespace WEBUI.Areas.Administration.Controllers
             {
             Product= new Product(),
             Categories=_cRep.GetActives(),
-            Suppliers= _sRep.GetActives()
+            Suppliers= _suRep.GetActives()
             // todo  there is a problem here
             };
             return View(pvm);
@@ -77,7 +77,7 @@ namespace WEBUI.Areas.Administration.Controllers
             ProductVM pvm = new ProductVM
             {
                 Categories = _cRep.GetActives(),
-                Suppliers=_sRep.GetActives(),
+                Suppliers=_suRep.GetActives(),
                 // todo mistake here
                 Product = _pRep.Find(id)
 
