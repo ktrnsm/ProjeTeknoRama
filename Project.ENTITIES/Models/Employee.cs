@@ -20,6 +20,7 @@ namespace Project.ENTITIES.Models
         public UserRole Role { get; set; }
         public decimal MonthlySales { get; set; }
         public decimal Salary { get; set; }
+        public string Password { get; set; }
 
         //Relational Properties
         public virtual List<Order> Orders { get; set; }
