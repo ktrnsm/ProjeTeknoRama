@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.ENTITIES", "Project
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.COMMON", "Project.COMMON\Project.COMMON.csproj", "{2CFE6434-6687-4162-A2CE-73B268207DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.WEBUI", "WEBUI\Project.WEBUI.csproj", "{E4F745B7-B70C-4080-A18C-6FE127649FFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBUI", "WEBUI\WEBUI.csproj", "{E4F745B7-B70C-4080-A18C-6FE127649FFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,7 +15,7 @@ namespace WEBUI.AuthenticationClasses
             {
                 return true;
             }
-            httpContext.Response.Redirect("/Shopping/ShoppingList")
+            httpContext.Response.Redirect("/Shopping/ShoppingList");
                 return false;
         }
     }
