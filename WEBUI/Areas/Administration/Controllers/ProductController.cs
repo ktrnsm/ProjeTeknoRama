@@ -57,7 +57,7 @@ namespace WEBUI.Areas.Administration.Controllers
             {
             Product= new Product(),
             Categories=_cRep.GetActives(),
-            Suppliers= _suRep.GetActives()
+            //Suppliers= _suRep.GetActives()
             // todo  there is a problem here
             };
             return View(pvm);
@@ -77,7 +77,7 @@ namespace WEBUI.Areas.Administration.Controllers
             ProductVM pvm = new ProductVM
             {
                 Categories = _cRep.GetActives(),
-                Suppliers=_suRep.GetActives(),
+              //  Suppliers=_suRep.GetActives(),
                 // todo mistake here
                 Product = _pRep.Find(id)
 

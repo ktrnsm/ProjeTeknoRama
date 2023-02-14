@@ -4,5 +4,42 @@
     ViewBag.Title = "AddMessage";
 }
 
-<h2>AddMessage</h2>
+<div class="login-body">
+
+    <div class="container">
+
+
+
+        @using (Html.BeginForm())
+        {
+
+
+            <div class="message-form">
+                <div class="login-wrap">
+                    <div class="form-title">
+                        <h1 class="form-title-text text-center">Hemen Mesaj Gönder</h1>
+                    </div>
+                    <label for="text" class="title">Konu Başlığı</label>
+                    @Html.EnumDropDownListFor(x => x.Message.MessageType, "Yardım almak istediğiniz konuyu seçiniz", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Message.MessageType)
+                    <label for="text" class="title">Konu</label>
+                    @Html.TextBoxFor(x => x.Message.Subject, new { @class = "form-control", placeholder = "Yardım almak istediğiniz konuyu giriniz", autocomplete = "off" })
+                    @Html.ValidationMessageFor(x => x.Message.Subject)
+                    <label for="text" class="title">Mesajınız</label>
+                    @Html.TextBoxFor(x => x.Message.Description, new { @class = "form-control", placeholder = "Lütfen mesajınızı giriniz", autocomplete = "off" })
+                    @Html.ValidationMessageFor(x => x.Message.Description)
+                    <label for="text" class="title">Email</label>
+                    @Html.TextBoxFor(x => x.Message.Email, new { @class = "form-control", placeholder = "Lütfen emailinizi giriniz", autocomplete = "off" })
+                    @Html.ValidationMessageFor(x => x.Message.Email)
+
+                    <button class="bt-register bt-md btn-block mt-3">Gönder</button>
+
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
 

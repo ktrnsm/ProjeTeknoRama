@@ -1,0 +1,23 @@
+﻿@model WEBUI.VMClasses.AppUserVM
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="login-body">
+
+    <div class="container">
+
+        @using(Html.BeginForm("Login", "Login", FormMethod.Post, new {@class="form-signin"}))
+            {
+
+
+            <div class="="login-wrap>
+                <h6 class="text-center text-danger">@ViewBag.NoAssignedUser</h6>
+
+                <h6 class="text-center text-danger">@TempData["IsAccountActive"]</h6>
+
+            </div>
+            }
+    </div>
+</div>
+

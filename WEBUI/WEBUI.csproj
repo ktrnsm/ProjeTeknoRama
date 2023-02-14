@@ -2266,6 +2266,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contact\AddTechIssue.cshtml" />
     <Content Include="Views\Contact\AddMessage.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

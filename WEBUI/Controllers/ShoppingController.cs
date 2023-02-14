@@ -68,7 +68,7 @@ namespace WEBUI.Controllers
             {
                 CardPageVM cpvm = new CardPageVM();
                 Card card = Session["scart"] as Card;
-                cpvm.Card = card; //todo
+               // cpvm.Card = card; //todo
                 return View(cpvm);
 
             }
